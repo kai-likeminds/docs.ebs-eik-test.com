@@ -406,16 +406,54 @@ PingOne Enterprise)</li>
               <li>
 o EIK 2.3.0.2 uses Log4j Version 2.17.0 to address the vulnerabilities stated
 in CVE-2021-44228, CVE-2021-45046, and CVE-2021-45105.</li>
+              <h5>Externalized JIT provisioning</h5>
               <li>o New JIT provisioning SDK Properties are externalized.
 </li>
+              <h5>Externalized CACERTS</h5>
               <li>The cacerts file has been externalized.</li>
+              <h5>Externalized security. properties</h5>
               <li>o Added functionality to set Security Headers and SameSite value
 in Cookies generated.
 o Addressed formatting issues and issues in Cookie Service for
 setting multiple cookies and handling exception cases where
 state Cookie validation is enabled and configurable.</li>
+              </ol>
             
             </div>
+              <div>
+                <h4>deployment notes</h4>
+                <ol>
+                  <h5>Deployment steps for Customers upgrading from EIK1.x to EIK 2.3.0.2</h5>
+                  <li>o For Customers using EIK1.0- EIK2.0 at present, the following sections
+needs to be re-configured with respect to the new EIK 2.3.0.2
+deployment guide as part of the upgrade to enable the latest feature
+updates.
+The EIK 2.3.0.2 deployment guide will be available in the support portal</li>
+                  <h5>o Sections to be re-configured:</h5>
+                  <li>1) 7.1 EIKAuth Config File Generation
+2) 7.2 EBS DataSource (DBCX) File Creation
+3) 7.3 Deploying EBSAuth File
+4) PingFederate Configuration changes: EIK 2.3.0.2 will need a
+dedicated attribute mapped to ID_Token in the PingFederate
+server. To add & map EIK attribute to ID_Token, please follow
+section 6.1.2.6 in the EIK 2.3.0.2 deployment guide and change
+the EIK attribute ‘eik_username’ in the configuration
+5) Place the provided log4j2.xml file inside the EBSAuth folder of the
+$EIK_HOME environment variable.
+6) Place the security.properties file in the EBSAuth folder.</li>
+                  <li>Also replace the existing license file with the new version available for
+your organization from the support portal. The license subscription dates
+will remain unchanged with respect your current version.
+</li>
+                  <h5>Deployment steps for new EIK Deployment in your Organization</h5>
+                  <li>o For Customers deploying the EIK 2.3.0.2 solution for the first time, kindly
+use the EIK 2.3.0.2 Deployment guide available in the support portal for
+information and guidance on end-to-end setup.
+Note: Please reach out to us with a support ticket via EIK Support for any
+questions or concerns.</li>
+                </ol>
+                
+                </div>
            
 
             <!-- Customers Card -->
